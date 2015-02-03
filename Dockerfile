@@ -29,7 +29,12 @@ WORKDIR /local/git/docker-mongo
 WORKDIR /data
 
 # Define default command.
-CMD ["mongod"]
+#CMD ["mongod"]
+
+RUN chmod +x /local/git/docker-mongo/run.sh
+# run startup script
+
+CMD ["/local/git/docker-mongo/run.sh"]
 
 # Expose ports.
 #   - 27017: process
