@@ -4,4 +4,8 @@ echo `env`
 
 git pull
 
-mongod
+# start mongo db
+mongod &
+
+# load demo data
+/local/git/docker-mongo//northwind-mongo-master//mongo-import.sh

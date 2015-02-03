@@ -32,6 +32,7 @@ WORKDIR /data
 #CMD ["mongod"]
 
 RUN chmod +x /local/git/docker-mongo/run.sh
+RUN chmod +x /local/git/docker-mongo//northwind-mongo-master/
 
 
 # Expose ports.
