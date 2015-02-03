@@ -5,7 +5,11 @@ echo `env`
 git pull
 
 # start mongo db
-mongod &
+nohup mongod &
+
+# wait for mongo to load
+sleep 30
 
 # load demo data
-/local/git/docker-mongo//northwind-mongo-master//mongo-import.sh
+cd local/git/docker-mongo/northwind-mongo-master/
+./mongo-import.sh
