@@ -32,9 +32,7 @@ WORKDIR /data
 #CMD ["mongod"]
 
 RUN chmod +x /local/git/docker-mongo/run.sh
-# run startup script
 
-CMD ["/local/git/docker-mongo/run.sh"]
 
 # Expose ports.
 #   - 27017: process
