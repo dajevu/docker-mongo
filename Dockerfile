@@ -17,24 +17,10 @@ VOLUME ["/data/db"]
 
 VOLUME /volume/git
 
-# create working directory
-RUN mkdir -p /local/git
-WORKDIR /local/git/
-
-# Install the test webapp
-RUN git clone https://github.com/dajevu/docker-mongo
-WORKDIR /local/git/docker-mongo
-
 # Define working directory.
 WORKDIR /data
 
-# Define default command.
 #CMD ["mongod"]
-
-RUN chmod +x /local/git/docker-mongo/run.sh
-RUN chmod +x /local/git/docker-mongo//northwind-mongo-master/
-
-
 # Expose ports.
 #   - 27017: process
 #   - 28017: http
